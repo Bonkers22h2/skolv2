@@ -14,46 +14,43 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top border border-black shadow-lg">
         <div class="container-fluid">
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+            <img src="../imgs/logo.png" class="logo">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
-            <a class="navbar-brand mx-auto" href="#">
-                <img src="../imgs/logo.png" class="logo" alt="Logo">
-            </a>
-
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-6">
                     <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active fw-semibold" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Link</a>
+                        <a class="nav-link active fw-semibold" href="#enroll">Enroll</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle fw-semibold active" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Dropdown
                         </a>
-                        <ul class="dropdown-menu bg-dark">
-                            <li><a class="dropdown-item text-light" href="#">Action</a></li>
-                            <li><a class="dropdown-item text-light" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item text-light" href="#">Something else here</a></li>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item fw-semibold" href="#">Action</a></li>
+                            <li><a class="dropdown-item fw-semibold" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item fw-semibold" href="#">Something else here</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled text-light" aria-disabled="true">Disabled</a>
+                        <a class="nav-link fw-semibold active" aria-disabled="true" href="#aboutUs">About us</a>
                     </li>
                 </ul>
-
-                <form class="d-flex ms-auto" role="search">
+                <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success text-light" type="submit">Search</button>
+                    <button class="btn btn-outline-success fw-semibold active" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -70,6 +67,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
+                <div class="overlay"></div> <!-- Dark overlay -->
                 <img src="../imgs/2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>First slide label</h5>
@@ -77,6 +75,7 @@
                 </div>
             </div>
             <div class="carousel-item">
+                <div class="overlay"></div> <!-- Dark overlay -->
                 <img src="../imgs/4.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Second slide label</h5>
@@ -84,6 +83,7 @@
                 </div>
             </div>
             <div class="carousel-item">
+                <div class="overlay"></div> <!-- Dark overlay -->
                 <img src="../imgs/3.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <h5>Third slide label</h5>
@@ -102,9 +102,10 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    
 
-    <div class="container-fluid container">
-        <div class="row justify-content-center">
+    <div class="container-fluid container" >
+        <div class="row justify-content-center" id="enroll">
             <div class="col-md-4 mb-4 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
                     <img src="https://via.placeholder.com/150" class="card-img-top" alt="Sample Image 1">
@@ -176,7 +177,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" id="aboutUs">
         <div class="row">
             <div class="col">
                 <img src="../imgs/OIP.jpg" style="height: 10rem; width: auto;">

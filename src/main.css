@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 .logo {
     height: 50px; /* Adjust height as needed */
     width: auto;  /* Maintain aspect ratio */
@@ -8,17 +15,15 @@
     max-width: 100%; /* Ensure no additional restriction */
 }
 
-.carousel-item img {
-    object-fit: cover; 
-    height: 44rem; 
-}
 .navbar {
+    background-color: #ffde8b;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000; /* Ensure it's above the carousel images */
 }
+
 .carousel-wrapper {
     margin-bottom: 2rem; /* Space below the carousel */
 }
@@ -26,6 +31,35 @@
 .carousel {
     border-bottom: 2px solid #dee2e6; /* Border to separate the carousel */
 }
-.container{
+
+.container {
     margin-top: 3rem;
+}
+
+.nav-item {
+    color: black;
+}
+
+.carousel-item {
+    position: relative;
+}
+
+.carousel-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust darkness here */
+    z-index: 1;
+}
+
+.carousel-item img {
+    z-index: 0;
+    object-fit: cover; 
+    height: 41rem; 
+}
+
+.carousel-caption {
+    z-index: 2; /* Keep caption above the overlay */
 }
