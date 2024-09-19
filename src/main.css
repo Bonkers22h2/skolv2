@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 
+/* Define the pulse animation */
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Apply the animation on hover */
+  .navbar-nav .nav-link:hover {
+    animation: pulse 0.3s ease-in-out;
+  }
+  
+
 body {
     font-family: 'Poppins', sans-serif;
 }

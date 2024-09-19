@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url("../imgs/bg.jpg");
+    background-size:cover;
+    background-position:center;
+}
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    }
+    .card-registration .select-arrow {
+    top: 13px;
+    }
+
+    #carouselExampleIndicators {
+        width: 100vw; /* 100% of the viewport width */
+        max-width: 100%; /* Ensure no additional restriction */
+    }
+
+    
