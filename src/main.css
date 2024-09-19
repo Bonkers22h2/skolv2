@@ -24,6 +24,11 @@ body {
     z-index: 1000; /* Ensure it's above the carousel images */
 }
 
+.row {
+    display: flex;
+    justify-content: justify-between;
+}
+
 .carousel-wrapper {
     margin-bottom: 2rem; /* Space below the carousel */
 }
@@ -35,6 +40,7 @@ body {
 .container {
     margin-top: 3rem;
 }
+
 
 .nav-item {
     color: black;
