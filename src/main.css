@@ -21,12 +21,24 @@ body {
 
 .navbar {
   background-color: #ffde8b;
+  border-width: 10px !important;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000; /* Ensure it's above the carousel images */
 }
+
+.btn-primary {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+.btn-primary:focus {
+  background-color: #ffde8b;
+}
+
 
 .row {
   display: flex;
