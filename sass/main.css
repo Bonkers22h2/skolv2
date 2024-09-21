@@ -4,6 +4,7 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11964,4 +11965,89 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+}
+/* Define the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Apply the animation on hover */
+.navbar-nav .nav-link:hover {
+  animation: pulse 0.3s ease-in-out;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  height: 50px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+}
+
+#carouselExampleIndicators {
+  width: 100vw; /* 100% of the viewport width */
+  max-width: 100%; /* Ensure no additional restriction */
+}
+
+.navbar {
+  background-color: #ffde8b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above the carousel images */
+}
+
+.row {
+  display: flex;
+  justify-content: justify-between;
+}
+
+.carousel-wrapper {
+  margin-bottom: 2rem; /* Space below the carousel */
+}
+
+.carousel {
+  border-bottom: 2px solid #dee2e6; /* Border to separate the carousel */
+}
+
+.container {
+  margin-top: 3rem;
+}
+
+.nav-item {
+  color: black;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust darkness here */
+  z-index: 1;
+}
+
+.carousel-item img {
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 41rem;
+}
+
+.carousel-caption {
+  z-index: 2; /* Keep caption above the overlay */
 }/*# sourceMappingURL=main.css.map */
