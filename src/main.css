@@ -1,13 +1,9 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 .navbar-nav .nav-link:hover {
   animation: pulse 0.3s ease-in-out;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-}
 
 .logo {
   height: 50px;
@@ -117,3 +113,10 @@ body {
 .carousel-caption {
   z-index: 2; /* Keep caption above the overlay */
 }/*# sourceMappingURL=main.css.map */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
