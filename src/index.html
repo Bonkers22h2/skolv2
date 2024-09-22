@@ -36,6 +36,8 @@
             <picture class="mx-5">
                 <source media="(min-width: 425px)" srcset="../imgs/ExtendedLogo.png" class="logo">
                 <img src="../imgs/Logo.png" alt="Responsive image" class="logo">
+                <button id="toggleDarkMode" class="btn ms-3 fw-semibold">Toggle Dark Mode</button>
+
             </picture>
 
             <!-- Collapse Button -->
@@ -373,3 +375,38 @@
 </body>
 
 </html>
+<script>
+    const toggleButton = document.getElementById('toggleDarkMode');
+    const body = document.body;
+    const navbar = document.querySelector('.navbar');
+    const cards = document.querySelectorAll('.card');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+
+    // Check local storage for dark mode preference
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        navbar.classList.add('dark-mode');
+        cards.forEach(card => card.classList.add('dark-mode'));
+        carouselItems.forEach(item => item.classList.add('dark-mode'));
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        navbar.classList.toggle('dark-mode');
+        cards.forEach(card => card.classList.toggle('dark-mode'));
+        carouselItems.forEach(item => item.classList.toggle('dark-mode'));
+
+        // Store preference in local storage
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+
+        // Adjust link colors
+        document.querySelectorAll('a').forEach(link => {
+            link.classList.toggle('dark-mode');
+        });
+    });
+</script>
+

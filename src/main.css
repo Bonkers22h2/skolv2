@@ -1,4 +1,23 @@
 
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
+.card.dark-mode {
+  color: white;
+  background-color: #1e1e1e; /* Dark card background */
+  border-color: #333; /* Card border */
+}
+
+.carousel-item.dark-mode {
+  filter: brightness(0.7); /* Adjust carousel images */
+}
+
+/* Optional: Adjust links for dark mode */
+a.dark-mode {
+  color: #bb86fc; /* Light link color */
+}
+
 
 .navbar-nav .nav-link:hover {
   animation: pulse 0.3s ease-in-out;
