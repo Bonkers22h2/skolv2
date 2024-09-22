@@ -1,3 +1,33 @@
+function generateFiveLetterCode() {
+    const letters = 'abcdefghijklmnopqrstuvwxyz';
+    let result = '';
+  
+    // Generate a 5-letter random string
+    for (let i = 0; i < 5; i++) {
+        result += letters.charAt(Math.floor(Math.random() * letters.length));
+    }
+  
+    return result;
+}
+
+function sendMail() {
+    const code = generateFiveLetterCode(); 
+    let parms = {
+        to_name: document.getElementById("firstName").value, 
+        from_name: "Pixel University", 
+        message: code, // Message content
+        to_email: document.getElementById("email").value 
+    };
+
+    emailjs.send("service_qmhfbmm", "template_l64nbii", parms)
+    .then(function(response) {
+        alert("Email sent successfully!");
+    }, function(error) {
+        alert("Failed to send email. Please try again.");
+        console.log('FAILED...', error);
+    });
+}
+
 function showText() {
     const select = document.getElementById('questionSelect');
     const resultText = document.getElementById('resultText');
@@ -29,15 +59,15 @@ function showText() {
             break;
         default:
             // Do nothing as both forms are hidden and result text is cleared
-            return; 
+            return;
     }
 
     // Automatically close the dropdown
     setTimeout(() => select.blur(), 1);
 }
 
-(function($) {
-    "use strict";  
+(function ($) {
+    "use strict";
 
     //* Form js
     function personalInformationForm() {
@@ -123,16 +153,16 @@ function showText() {
         $(".submit").click(function () {
             return false; // Prevent default form submission
         });
-    } 
+    }
 
     //* Select js
     function nice_Select() {
-        if ($('.product_select').length) { 
+        if ($('.product_select').length) {
             $('.product_select').niceSelect(); // Ensure it applies to the correct class
         }
-    } 
+    }
 
-    /*Function Calls*/  
+    /*Function Calls*/
     personalInformationForm();
     nice_Select();
 })(jQuery);
