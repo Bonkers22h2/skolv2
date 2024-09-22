@@ -10,11 +10,6 @@ body {
     background-position: center, center;
 }
 
-.carousel {
-    border: 2px solid #dee2e6; /* Example border, adjust as needed */
-    border-radius: 15px; /* Adjust this value for the desired roundness */
-    overflow: hidden; /* Prevents content from spilling out of rounded corners */
-}
 
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
     font-size: 1rem;
