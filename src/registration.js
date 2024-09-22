@@ -25,7 +25,7 @@ function showText() {
             resultText.innerHTML = "You selected: Senior High School Education.";
             break;
         case 'text3':
-            resultText.innerHTML = "You selected: High School Education.";
+            resultText.innerHTML = "You selected: Basic Education.";
             break;
         default:
             // Do nothing as both forms are hidden and result text is cleared
@@ -40,7 +40,7 @@ function showText() {
     "use strict";  
 
     //* Form js
-    function verificationForm() {
+    function personalInformationForm() {
         var current_fs, next_fs, previous_fs; // fieldsets
         var left, opacity, scale; // fieldset properties which we will animate
         var animating; // flag to prevent quick multi-click glitches
@@ -133,6 +133,6 @@ function showText() {
     } 
 
     /*Function Calls*/  
-    verificationForm();
+    personalInformationForm();
     nice_Select();
 })(jQuery);
