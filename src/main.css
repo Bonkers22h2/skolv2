@@ -67,9 +67,14 @@ body {
   object-fit: cover; /* Crop the image to fill the area */
 }
 
-.row {
-  display: flex;
-  justify-content: justify-between;
+.nav-row {
+  display: flex !important;
+  justify-content: justify-between !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 20px;
 }
 
 .carousel-wrapper {
