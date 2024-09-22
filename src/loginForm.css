@@ -10,6 +10,12 @@ body {
     background-position: center, center;
 }
 
+.carousel {
+    border: 2px solid #dee2e6; /* Example border, adjust as needed */
+    border-radius: 15px; /* Adjust this value for the desired roundness */
+    overflow: hidden; /* Prevents content from spilling out of rounded corners */
+}
+
 .card-registration .select-input.form-control[readonly]:not([disabled]) {
     font-size: 1rem;
     line-height: 2.15;
@@ -28,6 +34,8 @@ body {
     /* Ensure no additional restriction */
 }
 
-.btn {
-    background-color: #ffde8b;
+.custom-floating-input:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 0.2rem rgba(255, 222, 139, 0.5); /* Custom shadow */
+    border-color: #ffde8b; /* Change border color */
 }
