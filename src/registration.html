@@ -162,7 +162,7 @@
           <!-- Replace this block in your last fieldset -->
           <fieldset>
             <h3>Verify your email</h3>
-            <h6>A code for email verification is sent to your account</h6>
+            <h6>A code for email verification will sent to your account</h6>
             <div class="d-flex justify-content-center">
               <div class="form-row align-items-center">
                 <div class="form-group mb-10 me-2">
@@ -174,7 +174,8 @@
               </div>
             </div>
             <button type="button" class="action-button previous previous_button">Back</button>
-            <button type="button" class="action-button" onclick="window.location.href='http://127.0.0.1:5500/src/'">Finish</button>
+            <!-- tried disabling the button -->
+            <button type="button" id="finishButton" class="action-button" onclick="window.location.href='http://127.0.0.1:5500/src/'" disabled>Finish</button>
           </fieldset>
 
         </form>

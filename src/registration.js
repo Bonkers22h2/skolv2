@@ -10,6 +10,9 @@ function generateFiveLetterCode() {
     return result;
 }
 
+// global variable
+const generatedCode = "";
+
 function sendMail() {
     const code = generateFiveLetterCode(); 
     let parms = {
@@ -22,10 +25,23 @@ function sendMail() {
     emailjs.send("service_qmhfbmm", "template_l64nbii", parms)
     .then(function(response) {
         alert("Email sent successfully!");
+        // this
+        generatedCode = code;
+        verifyCode();
     }, function(error) {
         alert("Failed to send email. Please try again.");
         console.log('FAILED...', error);
     });
+
+}
+
+// this 
+function verifyCode(){
+    const receivedCode = document.getElementById('codeVerify');
+    if(generatedCode == receivedCode){
+        const button = document.getElementById("finishButton");
+        button.removeAttribute("disabled");
+    }
 }
 
 function showText() {
