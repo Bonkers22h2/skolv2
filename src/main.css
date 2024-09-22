@@ -37,8 +37,18 @@ body {
   text-overflow: ellipsis; 
 }
 
-.btn-primary {
+.spaced-paragraph {
+  margin-bottom: 0em; /* Adjust the spacing as needed */
+}
+
+.login-btn{
   background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+.btn-primary {
+  background-color: #ffde8b !important;
   color: black !important;
   border: 1px solid black !important;
 }
@@ -46,7 +56,6 @@ body {
 .btn-primary:focus {
   background-color: #ffde8b;
 }
-
 
 .row {
   display: flex;
