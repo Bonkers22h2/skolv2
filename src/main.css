@@ -82,6 +82,10 @@ a.dark-mode {
   object-fit: cover; /* Crop the image to fill the area */
 }
 
+.color-switch {
+  background-color: #ffde8b;
+}
+
 .nav-row {
   display: flex !important;
   justify-content: justify-between !important;
