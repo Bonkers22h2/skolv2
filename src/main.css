@@ -10,8 +10,8 @@ body {
 }
 
 .logo {
-  height: 50px; /* Adjust height as needed */
-  width: auto; /* Maintain aspect ratio */
+  height: 50px;
+  width: auto;
 }
 
 #carouselExampleIndicators {
@@ -27,6 +27,14 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000; /* Ensure it's above the carousel images */
+}
+
+.truncate {
+  max-width: 100%; /* Set maximum width to 100% of the parent */
+  width: auto; /* Auto width based on content */
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
 
 .btn-primary {

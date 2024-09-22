@@ -20,7 +20,10 @@
         <div class="container-fluid">
     
             <!-- Image -->
-            <img src="../imgs/ExtendedLogo.png" class="logo mx-5">
+            <picture class="mx-5">
+                <source media="(min-width: 425px)" srcset="../imgs/ExtendedLogo.png" class="logo">
+                <img src="../imgs/Logo.png" alt="Responsive image" class="logo">
+              </picture>
     
             <!-- Collapse Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -44,16 +47,16 @@
                             About Us
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item fw-semibold" href="#aboutUs">History</a></li>
-                            <li><a class="dropdown-item fw-semibold" href="#">Mission and Vision</a></li>
-                            <li><a class="dropdown-item fw-semibold" href="#">Core Values</a></li>
+                            <li><a class="dropdown-item" href="#aboutUs">History</a></li>
+                            <li><a class="dropdown-item" href="#">Mission and Vision</a></li>
+                            <li><a class="dropdown-item" href="#">Core Values</a></li>
                         </ul>
                     </li>
                     <li class="nav-item ps-3">
-                        <a class="nav-link active fw-semibold" href="#enroll">Campus Facilities</a>
+                        <a class="nav-link active fw-semibold truncate" href="#">Campus Facilities</a>
                     </li>
                     <li class="nav-item ps-3"></li>
-                        <a class="nav-link active fw-semibold" href="#enroll">Special Programs</a>
+                        <a class="nav-link active fw-semibold truncate" href="#">Special Programs</a>
                     </li>
                 </ul>
     

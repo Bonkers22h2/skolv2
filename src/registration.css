@@ -327,3 +327,10 @@
   border-color: #405867;
   color: #fff;
 }
+
+.btn-primary {
+  background-color: black !important;
+  color: white !important;
+  border: 1px solid black !important;
+}
+
