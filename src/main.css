@@ -57,6 +57,16 @@ body {
   background-color: #ffde8b;
 }
 
+.card {
+  height: 23rem;
+  width: 24rem;
+}
+.card-img-top {
+  width: 100%;       /* Make it responsive */
+  height: 200px;    /* Set fixed height */
+  object-fit: cover; /* Crop the image to fill the area */
+}
+
 .row {
   display: flex;
   justify-content: justify-between;
