@@ -29,9 +29,15 @@ a.dark-mode {
   width: auto;
 }
 
-.dark-mode-button-trigger {
-  height: 20px;
-  width: auto;
+#toggleDarkMode {
+  height: 100%; /* Make button height equal to navbar height */
+  display: flex; /* Center the image vertically */
+  align-items: center; /* Center the image vertically */
+}
+
+#toggleDarkMode img {
+  max-height: 100%; /* Ensure the image fits within the button */
+  width: auto; /* Maintain aspect ratio */
 }
 
 #carouselExampleIndicators {
