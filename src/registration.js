@@ -20,7 +20,6 @@ function sendMail() {
 
     emailjs.send("service_qmhfbmm", "template_l64nbii", parms)
     .then(function(response) {
-        alert("Email sent successfully!");
         document.getElementById('validEmail').classList.remove('d-none');
         setTimeout(() => {
             document.getElementById('validEmail').classList.add('d-none'); // Hide the paragraph
