@@ -45,7 +45,7 @@ function validateCode() {
     codeValidAlert.classList.add('d-none');
 
     // Check if the input code is valid
-    if (inputCode !== generatedCode) {
+    if (inputCode != generatedCode) {
         codeInvalidAlert.classList.remove('d-none'); // Show invalid code alert
         setTimeout(() => {
             codeInvalidAlert.classList.add('d-none'); // Hide the alert after 3 seconds
