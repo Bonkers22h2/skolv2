@@ -29,6 +29,11 @@ a.dark-mode {
   width: auto;
 }
 
+.dark-mode-button-trigger {
+  height: 20px;
+  width: auto;
+}
+
 #carouselExampleIndicators {
   width: 100vw; /* 100% of the viewport width */
   max-width: 100%; /* Ensure no additional restriction */
