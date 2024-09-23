@@ -21,19 +21,28 @@ function sendMail() {
     emailjs.send("service_qmhfbmm", "template_l64nbii", parms)
     .then(function(response) {
         alert("Email sent successfully!");
+        document.getElementById('validEmail').classList.remove('d-none');
+        setTimeout(() => {
+            document.getElementById('validEmail').classList.add('d-none'); // Hide the paragraph
+        }, 3000);
         generatedCode = code; // Store the generated code
     }, function(error) {
-        alert("Failed to send email. Please try again.");
+        document.getElementById('invalidEmail').classList.remove('d-none');
+        setTimeout(() => {
+            document.getElementById('invalidEmail').classList.add('d-none'); // Hide the paragraph
+        }, 3000);
         console.log('FAILED...', error);
+        
     });
 }
 
 function validateCode() {
     const inputCode = document.getElementById("codeVerify").value; // Update the ID here
-    if (inputCode === generatedCode) {
-        alert("Match!");
-    } else {
-        alert("Mismatch. Please try again.");
+    if (inputCode != generatedCode) {
+        document.getElementById('codeInvalid').classList.remove('d-none');
+        setTimeout(() => {
+            document.getElementById('codeInvalid').classList.add('d-none'); // Hide the paragraph
+        }, 3000);
     }
 }
 

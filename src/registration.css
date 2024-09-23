@@ -334,3 +334,8 @@
   border: 1px solid black !important;
 }
 
+.custom-alert {
+  padding: 5px 100px;  /* Reduce padding */
+  width: auto;  /* Or set a fixed width like 'width: 200px;' */
+  display: inline-block;  /* Makes the width just fit the content */
+}

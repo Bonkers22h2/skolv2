@@ -168,9 +168,20 @@
                         <input type="text" class="form-control" id="codeVerify" placeholder="Enter code">
                     </div>
                     <div class="form-group mb-10">
-                        <button type="button" class="action-button submit" onclick="sendMail()">Submit</button>
+                        <button type="button" class="action-button submit" onclick="sendMail()">Send Code</button>
                     </div>
                 </div>
+            </div>
+            <div>
+              <div id="validEmail" class="alert alert-success custom-alert d-none mt-1 p-2 pe-5 ps-5">
+                Code successfully sent!
+              </div>
+              <div id="invalidEmail" class="alert alert-danger custom-alert d-none mt-1 p-2 pe-5 ps-5">
+                Invalid email.
+              </div>
+              <div id="codeInvalid" class="alert alert-danger custom-alert d-none mt-1 p-2 pe-5 ps-5">
+                Invalid code.
+              </div>
             </div>
             <button type="button" class="action-button previous previous_button">Back</button>
             <button type="button" id="finishButton" class="action-button" onclick="validateCode()">Finish</button>
