@@ -346,7 +346,9 @@
             </div>
             <div class="col m-3">
                 <h4 class="mb-1">Contact Us</h4>
-                <p class="spaced-paragraph mr-1">Email: pixeluniversity@gmail.com</p>
+                <a href="contactUs.html">
+                    <p class="spaced-paragraph mr-1">Email: pixeluniversity@gmail.com</p>
+                </a>
                 <p class="spaced-paragraph">Hotline: +63 2 1234 5678</p>
                 <p class="spaced-paragraph">2600 Legarda St., Sampaloc, Manila, 1008 Metro Manila</p>
             </div>
@@ -361,6 +363,8 @@
     const navbar = document.querySelector('.navbar');
     const cards = document.querySelectorAll('.card');
     const carouselItems = document.querySelectorAll('.carousel-item');
+    const submitButton = document.getElementById('submitButton'); // Replace with your actual submit button ID
+    const messageContainer = document.getElementById('messageContainer'); // Replace with your actual message container ID
 
     // Check local storage for dark mode preference
     if (localStorage.getItem('dark-mode') === 'enabled') {
@@ -388,5 +392,12 @@
             link.classList.toggle('dark-mode');
         });
     });
-</script>
 
+    // Clear messages on submit
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent default form submission if necessary
+        if (messageContainer) {
+            messageContainer.innerHTML = ''; // Clear messages
+        }
+    });
+</script>
