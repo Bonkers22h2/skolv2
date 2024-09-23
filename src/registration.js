@@ -37,14 +37,30 @@ function sendMail() {
 }
 
 function validateCode() {
-    const inputCode = document.getElementById("codeVerify").value; // Update the ID here
-    if (inputCode != generatedCode) {
-        document.getElementById('codeInvalid').classList.remove('d-none');
+    const inputCode = document.getElementById("codeVerify").value; // Get the value from the input field
+    const codeInvalidAlert = document.getElementById('codeInvalid');
+    const codeValidAlert = document.getElementById('codeValid');
+
+    // Clear previous messages
+    codeInvalidAlert.classList.add('d-none');
+    codeValidAlert.classList.add('d-none');
+
+    // Check if the input code is valid
+    if (inputCode !== generatedCode) {
+        codeInvalidAlert.classList.remove('d-none'); // Show invalid code alert
         setTimeout(() => {
-            document.getElementById('codeInvalid').classList.add('d-none'); // Hide the paragraph
+            codeInvalidAlert.classList.add('d-none'); // Hide the alert after 3 seconds
+        }, 3000);
+    } else {
+        codeValidAlert.classList.remove('d-none'); // Show valid code alert
+        setTimeout(() => {
+            codeValidAlert.classList.add('d-none'); // Hide the alert after 3 seconds
+            window.location.href = '../src/index.html'; // Redirect to index.html
         }, 3000);
     }
 }
+
+
 
 
 function showText() {
