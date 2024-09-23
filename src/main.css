@@ -86,6 +86,15 @@ a.dark-mode {
   background-color: #ffde8b;
 }
 
+.custom-footer {
+  background-color: #ffde8b;
+  color: black;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(to bottom, #ffffff, #ffde8b);
+}
+
 .nav-row {
   display: flex !important;
   justify-content: justify-between !important;
