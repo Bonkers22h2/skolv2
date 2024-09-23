@@ -1,33 +1,161 @@
+
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
+.card.dark-mode {
+  color: white;
+  background-color: #1e1e1e; /* Dark card background */
+  border-color: #333; /* Card border */
+}
+
+.carousel-item.dark-mode {
+  filter: brightness(0.7); /* Adjust carousel images */
+}
+
+/* Optional: Adjust links for dark mode */
+a.dark-mode {
+  color: #bb86fc; /* Light link color */
+}
+
+
+.navbar-nav .nav-link:hover {
+  animation: pulse 0.3s ease-in-out;
+}
+
+
 .logo {
-    height: 50px; /* Adjust height as needed */
-    width: auto;  /* Maintain aspect ratio */
+  height: 50px;
+  width: auto;
+}
+
+.dark-mode-button-trigger {
+  height: 20px;
+  width: auto;
 }
 
 #carouselExampleIndicators {
-    width: 100vw; /* 100% of the viewport width */
-    max-width: 100%; /* Ensure no additional restriction */
+  width: 100vw; /* 100% of the viewport width */
+  max-width: 100%; /* Ensure no additional restriction */
 }
 
-.carousel-item img {
-    object-fit: cover; 
-    height: 44rem; 
-}
 .navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it's above the carousel images */
+  background-color: #ffde8b;
+  border-width: 10px !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above the carousel images */
 }
+
+.truncate {
+  max-width: 100%; /* Set maximum width to 100% of the parent */
+  width: auto; /* Auto width based on content */
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.spaced-paragraph {
+  margin-bottom: 0em; /* Adjust the spacing as needed */
+}
+
+.login-btn{
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+.btn-primary {
+  background-color: #ffde8b !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+.btn-primary:focus {
+  background-color: #ffde8b;
+}
+
+.card {
+  height: 23rem;
+  width: 24rem;
+}
+.card-img-top {
+  width: 100%;       /* Make it responsive */
+  height: 200px;    /* Set fixed height */
+  object-fit: cover; /* Crop the image to fill the area */
+}
+
+.color-switch {
+  background-color: #ffde8b;
+}
+
+.custom-footer {
+  background-color: #ffde8b;
+  color: black;
+}
+
+.bg-gradient {
+  background-image: linear-gradient(to bottom, #ffffff, #ffde8b);
+}
+
+.nav-row {
+  display: flex !important;
+  justify-content: justify-between !important;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 20px;
+}
+
 .carousel-wrapper {
-    margin-bottom: 2rem; /* Space below the carousel */
+  margin-bottom: 2rem; /* Space below the carousel */
 }
 
 .carousel {
-    border-bottom: 2px solid #dee2e6; /* Border to separate the carousel */
+  border-bottom: 2px solid #dee2e6; /* Border to separate the carousel */
 }
-.container{
-    margin-top: 3rem;
+
+.container {
+  margin-top: 3rem;
+}
+
+.nav-item {
+  color: black;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust darkness here */
+  z-index: 1;
+}
+
+.carousel-item img {
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 41rem;
+}
+
+.carousel-caption {
+  z-index: 2; /* Keep caption above the overlay */
+}/*# sourceMappingURL=main.css.map */
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 .custom-toggler {
     border-color: white; /* Optional: changes the border color of the button */

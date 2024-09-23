@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image:
+        linear-gradient(90deg, rgba(252, 243, 219, 0.5) 0%, rgba(255, 222, 139, 0.5) 49%, rgba(255, 182, 0, 0.5) 100%),
+        url("../imgs/bg.jpg");
+    background-size: cover, cover;
+    background-position: center, center;
+}
+
+
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+}
+
+.card-registration .select-arrow {
+    top: 13px;
+}
+
+#carouselExampleIndicators {
+    width: 100vw;
+    /* 100% of the viewport width */
+    max-width: 100%;
+    /* Ensure no additional restriction */
+}
+
+.custom-floating-input:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 0 0.2rem rgba(255, 222, 139, 0.5); /* Custom shadow */
+    border-color: #ffde8b; /* Change border color */
+}
