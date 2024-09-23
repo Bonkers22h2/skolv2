@@ -1,17 +1,13 @@
+let generatedCode = "";
+
 function generateFiveLetterCode() {
     const letters = 'abcdefghijklmnopqrstuvwxyz';
     let result = '';
-  
-    // Generate a 5-letter random string
     for (let i = 0; i < 5; i++) {
         result += letters.charAt(Math.floor(Math.random() * letters.length));
     }
-  
     return result;
 }
-
-// global variable
-const generatedCode = "";
 
 function sendMail() {
     const code = generateFiveLetterCode(); 
@@ -25,24 +21,22 @@ function sendMail() {
     emailjs.send("service_qmhfbmm", "template_l64nbii", parms)
     .then(function(response) {
         alert("Email sent successfully!");
-        // this
-        generatedCode = code;
-        verifyCode();
+        generatedCode = code; // Store the generated code
     }, function(error) {
         alert("Failed to send email. Please try again.");
         console.log('FAILED...', error);
     });
-
 }
 
-// this 
-function verifyCode(){
-    const receivedCode = document.getElementById('codeVerify');
-    if(generatedCode == receivedCode){
-        const button = document.getElementById("finishButton");
-        button.removeAttribute("disabled");
+function validateCode() {
+    const inputCode = document.getElementById("codeVerify").value; // Update the ID here
+    if (inputCode === generatedCode) {
+        alert("Match!");
+    } else {
+        alert("Mismatch. Please try again.");
     }
 }
+
 
 function showText() {
     const select = document.getElementById('questionSelect');

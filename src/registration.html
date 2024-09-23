@@ -159,25 +159,22 @@
             <button type="button" class="action-button previous previous_button">Back</button>
             <button type="button" class="next action-button">Continue</button>
           </fieldset>
-          <!-- Replace this block in your last fieldset -->
           <fieldset>
             <h3>Verify your email</h3>
-            <h6>A code for email verification will sent to your account</h6>
+            <h6>A code for email verification will be sent to your account</h6>
             <div class="d-flex justify-content-center">
-              <div class="form-row align-items-center">
-                <div class="form-group mb-10 me-2">
-                  <input type="text" class="form-control" id="codeVerify" placeholder="Enter code">
+                <div class="form-row align-items-center">
+                    <div class="form-group mb-10 me-2">
+                        <input type="text" class="form-control" id="codeVerify" placeholder="Enter code">
+                    </div>
+                    <div class="form-group mb-10">
+                        <button type="button" class="action-button submit" onclick="sendMail()">Submit</button>
+                    </div>
                 </div>
-                <div class="form-group mb-10">
-                  <button type="button" class="action-button submit" onclick="sendMail()">Submit</button>
-                </div>
-              </div>
             </div>
             <button type="button" class="action-button previous previous_button">Back</button>
-            <!-- tried disabling the button -->
-            <button type="button" id="finishButton" class="action-button" onclick="window.location.href='http://127.0.0.1:5500/src/'" disabled>Finish</button>
-          </fieldset>
-
+            <button type="button" id="finishButton" class="action-button" onclick="validateCode()">Finish</button>
+        </fieldset>        
         </form>
       </section>
     </article>
