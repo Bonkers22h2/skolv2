@@ -46,7 +46,12 @@
                                                 required></textarea>
                                             <label for="message">Your Message</label>
                                         </div>
-
+                                        <div id="emailSent" class="alert alert-success custom-alert d-none text-center mt-1 p-2 pe-5 ps-5">
+                                            Email successfully sent!
+                                        </div>
+                                        <div id="emailNotSent" class="alert alert-danger custom-alert d-none text-center mt-1 p-2 pe-5 ps-5">
+                                            Failed to send email.
+                                        </div>
                                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                             <button type="button" class="btn btn-primary border-black btn-lg me-3"
                                                 style="background-color: #FFDE8B; color: black;" onclick="sendMail()">Send</button>
@@ -72,10 +77,19 @@
 
     emailjs.send("service_qmhfbmm", "template_bwyje56", parms)
     .then(function(response) {
-        alert("Email sent successfully!");
+        document.getElementById('emailSent').classList.remove('d-none');
+        setTimeout(() => {
+            document.getElementById('emailSent').classList.add('d-none'); // Hide the paragraph
+        }, 3000);
         generatedCode = code;
+
     }, function(error) {
-        alert("Failed to send email. Please try again.");
+
+        document.getElementById('emailNotSent').classList.remove('d-none');
+        setTimeout(() => {
+            document.getElementById('emailNotSent').classList.add('d-none'); // Hide the paragraph
+        }, 3000);
+
         console.log('FAILED...', error);
     });
 }
